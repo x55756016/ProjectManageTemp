@@ -1,0 +1,61 @@
+http://smtdev.smt-online.net/Mvc/
+UID:tm  Pwd:123
+
+
+
+https://smtsvn.smt-online.net/svn/SMTMVCFrameworkDemo/
+用户名: vendor
+密码: 201204abc
+
+
+https://smtsvn.smt-online.net/svn/SMTSAASOA/WP/
+HG/Hg@WH027，
+
+广州睿码建帐号GZRM/Gzrm@GZ020
+
+
+系统	用户	表空间	密码	权限
+培训	SMTOUTTR	SMTOUTTR	smtouttr123	connect、resource
+权限	SMTOUTPR	SMTOUTPR	smtoutpr123	connect、resource
+招聘	SMTOUTRM	SMTOUTRM	smtoutrm123	connect、resource
+WP	SMTOUTWP	SMTWP		smtwp
+
+数据库对外地址为：220.175.137.238   端口：1521
+
+
+https://smtsvn.smt-online.net/svn/SMTSAASOA/RM
+用户	密码	类别
+David	David123	项目经理
+Qiu	Qiu123	程序员
+Sowhat	Sowhat123	程序员
+Zhao	Zhao123	程序员
+Tang	Tang123	测试员
+
+
+https://smtsvn.smt-online.net/svn/SMTSAASOA/WP/
+马忠宝 MZB / Mzb123 
+阮鸥   RO/Ro123
+王正兴 WZX/Wzx123
+李阳   LY/Ly123
+
+新的MVC平台：http://smtdev.smt-online.net/Mvc/
+旧的SL平台：http://smtdev.smt-online.net/ 
+
+
+https://smtsvn.smt-online.net/svn/SMTSAASOA/PR/
+姓名	用户	密码
+龚伟  	gongwei	2012123
+罗捷	luojie	2012168
+罗煜忠 	luoxz	2012abc
+谢东旭 	xiedx	2012339
+
+
+开发登陆帐号
+地址：http://smtdev.smt-online.net/
+
+管理员账号：ganzj   密码：123
+
+工作计划外包使用账号：HGD   密码：Hgd123
+
+招聘外包使用账号：GZRM   密码：Gzrm123
+

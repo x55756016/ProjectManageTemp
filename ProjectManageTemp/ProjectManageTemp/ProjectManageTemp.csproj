@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectTypeGuids>{BAA0C2D2-18E2-41B9-852F-F413020CAA33};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <RootNamespace>ProjectManageTemp</RootNamespace>
+    <AssemblyName>ProjectManageTemp</AssemblyName>
+    <VSTO_HostDocumentName>ProjectManageTemp.docx</VSTO_HostDocumentName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DefineConstants>VSTO40</DefineConstants>
+    <OfficeApplication>Word</OfficeApplication>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
+    <ProjectGuid>{DBA26615-AC32-446D-8E4D-C1B3F49E138E}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VSTO_EmbedTypeLibraryInAssembly>false</VSTO_EmbedTypeLibraryInAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!--
+    This section specifies references for the project.
+  -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Word.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProjectManageTemp.docx" />
+    <Compile Include="ThisDocument.cs">
+      <DependentUpon>ProjectManageTemp.docx</DependentUpon>
+    </Compile>
+    <None Include="ThisDocument.Designer.xml">
+      <DependentUpon>ThisDocument.cs</DependentUpon>
+    </None>
+    <Compile Include="ThisDocument.Designer.cs">
+      <DependentUpon>ThisDocument.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="V1.0\工程\其它\背景调查表（神州通集团）.doc" />
+    <None Include="V1.0\工程\其它\面试记录及录用确认表.doc" />
+    <None Include="V1.0\工程\分析\RMV1.0_技术方案选择评估表.xls" />
+    <None Include="V1.0\工程\分析\RMV1.0_用户故事.xls" />
+    <None Include="V1.0\工程\分析\RMV1.0_需求规格说明书.docx" />
+    <None Include="V1.0\工程\分析\分析文档V1.0\Permission Table.pdm" />
+    <None Include="V1.0\工程\分析\分析文档V1.0\权限系统_数据库设计说明书.doc" />
+    <None Include="V1.0\工程\分析\分析文档V1.0\权限系统_概要设计说明书.docx" />
+    <None Include="V1.0\工程\分析\分析文档V1.0\权限系统_需求规格说明书.docx" />
+    <None Include="V1.0\工程\分析\原型\培训201200303.rp" />
+    <None Include="V1.0\工程\分析\原型\培训20120310.rp" />
+    <None Include="V1.0\工程\分析\原型\培训V1.0_客户需求分析表 20120305-01.xls" />
+    <None Include="V1.0\工程\分析\原型\培训V1.0_客户需求分析表 20120312-01.xls" />
+    <None Include="V1.0\工程\分析\原型\招聘2011121718.rp" />
+    <None Include="V1.0\工程\分析\原型\招聘20120218.rp" />
+    <None Include="V1.0\工程\分析\招聘系统.pdm" />
+    <None Include="V1.0\工程\分析\招聘系统_用户故事042702.xls" />
+    <None Include="V1.0\工程\分析\招聘系统原型042702.rp" />
+    <None Include="V1.0\工程\分析\流程图\HR Recruitment flow chart 2011121901.vsd" />
+    <None Include="V1.0\工程\实现\RMV1.0_代码检查表_傅意成.xlsx" />
+    <None Include="V1.0\工程\测试\RMV1.0_冒烟测试报告.doc" />
+    <None Include="V1.0\工程\测试\RMV1.0_测试总结.doc" />
+    <None Include="V1.0\工程\测试\RMV1.0_测试方案.doc" />
+    <None Include="V1.0\工程\测试\RMV1.0_测试用例.xls" />
+    <None Include="V1.0\工程\测试\RMV1.0_环境更新清单.xlsx" />
+    <None Include="V1.0\工程\测试\RMV1.0_系统测试方案.doc" />
+    <None Include="V1.0\工程\测试\RMV1.1_冒烟测试报告.doc" />
+    <None Include="V1.0\工程\测试\RMV1.1_系统测试报告.doc" />
+    <None Include="V1.0\工程\测试\RMV2.0_冒烟测试报告.doc" />
+    <None Include="V1.0\工程\测试\RMV2.0_系统测试报告.doc" />
+    <None Include="V1.0\工程\测试\RMV2.1_冒烟测试报告.doc" />
+    <None Include="V1.0\工程\测试\RMV2.2_冒烟测试报告.doc" />
+    <None Include="V1.0\工程\立项\RMV1.0_技术可行性分析报告.doc" />
+    <None Include="V1.0\工程\立项\RMV1.0_技术方案选择评估表.xls" />
+    <None Include="V1.0\工程\立项\RMV1.0_需求确认报告.xls" />
+    <None Include="V1.0\工程\立项\RMV1.0_项目立项报告.doc" />
+    <None Include="V1.0\工程\立项\外包商评估报告.xls" />
+    <None Include="V1.0\工程\立项\外包开发合同模板.doc" />
+    <None Include="V1.0\工程\立项\广州睿码_外包开发合同_人事招聘.doc" />
+    <None Include="V1.0\工程\设计\RM Interface.xps" />
+    <None Include="V1.0\工程\设计\字典.xlsx" />
+    <None Include="V1.0\工程\设计\招聘系统_接口.xlsx" />
+    <None Include="V1.0\工程\设计\招聘系统原型042702.rp" />
+    <None Include="V1.0\工程\验收\RMV1.0_客户验收报告.xls" />
+    <None Include="V1.0\工程\验收\RMV1.0_试运行报告.xls" />
+    <None Include="V1.0\工程\验收\测试方案.doc" />
+    <None Include="V1.0\工程\验收\测试用例.xls" />
+    <None Include="V1.0\工程\验收\神州通即时通讯操作手册.doc" />
+    <None Include="V1.0\工程\验收\验收标准\SMT开发框架使用手册.docx" />
+    <None Include="V1.0\工程\验收\验收标准\代码检查表.xlsx" />
+    <None Include="V1.0\工程\验收\验收标准\神州通在线科技编程规范.doc" />
+    <None Include="V1.0\工程\验收\验收标准\验收测试退出标准.doc" />
+    <None Include="V1.0\工程\验收\验收需提供文档\代码检查表.xlsx" />
+    <None Include="V1.0\工程\验收\验收需提供文档\单元测试记录表.xls" />
+    <None Include="V1.0\工程\验收\验收需提供文档\环境更新清单.xlsx" />
+    <None Include="V1.0\工程\验收\验收需提供文档\详细设计说明书.doc" />
+    <None Include="V1.0\工程\验收\验收需提供文档\项目周报.xls" />
+    <None Include="V1.0\工程\验收\验收需提供文档\验收测试退出标准.doc" />
+    <None Include="V1.0\管理\会议纪要\站立会议（201204）.docx" />
+    <None Include="V1.0\管理\会议纪要\站立会议（201205）.docx" />
+    <None Include="V1.0\管理\会议纪要\站立会议（201206）.docx" />
+    <None Include="V1.0\管理\会议纪要\站立会议（201207）.docx" />
+    <None Include="V1.0\管理\会议纪要\站立会议（201208）.docx" />
+    <None Include="V1.0\管理\会议纪要\站立会议（201209）.docx" />
+    <None Include="V1.0\管理\其它\CO2.0_项目周报_迭代.xls" />
+    <None Include="V1.0\管理\其它\COV2.0_项目月报.xls" />
+    <None Include="V1.0\管理\其它\IMV1.0_外包商评估报告.xls" />
+    <None Include="V1.0\管理\其它\RecruitSystem.bpm" />
+    <None Include="V1.0\管理\其它\中天冠捷\中天冠捷项目评估分项报价表（招聘模块）.rar" />
+    <None Include="V1.0\管理\其它\中天冠捷\中天冠捷项目评估分项报价表（招聘模块）0410.xls" />
+    <None Include="V1.0\管理\其它\中天冠捷\中天冠捷项目评估分项报价表（招聘模块）201204121134.rar" />
+    <None Include="V1.0\管理\其它\中天冠捷\中天冠捷项目评估分项报价表（招聘）.xls" />
+    <None Include="V1.0\管理\其它\中天冠捷信息.docx" />
+    <None Include="V1.0\管理\其它\中天冠捷项目评估分项报价表%28工作计划%29.xls" />
+    <None Include="V1.0\管理\其它\公司资料.rar" />
+    <None Include="V1.0\管理\其它\外包合同\%28讨论%29外包开发合同模板_人事招聘.doc" />
+    <None Include="V1.0\管理\其它\外包合同\[调整]广州睿码_外包开发合同模板_人事招聘1.doc" />
+    <None Include="V1.0\管理\其它\外包商评估报告20120406.xls" />
+    <None Include="V1.0\管理\其它\外包商评估报告20120419.xls" />
+    <None Include="V1.0\管理\其它\外包商评估报告20120426.xls" />
+    <None Include="V1.0\管理\其它\外包商评估报告20120604.xls" />
+    <None Include="V1.0\管理\其它\外包需求文档\招聘系统_用户故事042702.xls" />
+    <None Include="V1.0\管理\其它\外包需求文档\招聘系统原型042702.rp" />
+    <None Include="V1.0\管理\其它\广州睿码评估\[广州睿码]工作量重新评估0408.xls" />
+    <None Include="V1.0\管理\其它\广州睿码评估\[广州睿码]招聘项目重新评估（根据详细需求%2920120413.xls" />
+    <None Include="V1.0\管理\其它\开发计划\人事招聘开发计划00.mpp" />
+    <None Include="V1.0\管理\其它\开发计划\人事招聘开发计划01.mpp" />
+    <None Include="V1.0\管理\其它\开发计划\广州睿码_人事招聘开发计划.xls" />
+    <None Include="V1.0\管理\其它\开发计划模板.mpp" />
+    <None Include="V1.0\管理\其它\站立会议（201204）.docx" />
+    <None Include="V1.0\管理\其它\站立会议（201205）.docx" />
+    <None Include="V1.0\管理\其它\站立会议（201206）.docx" />
+    <None Include="V1.0\管理\其它\站立会议（201207）.docx" />
+    <None Include="V1.0\管理\其它\站立会议（201208）.docx" />
+    <None Include="V1.0\管理\其它\站立会议（201209）.docx" />
+    <None Include="V1.0\管理\其它\站立会议（201210）.docx" />
+    <None Include="V1.0\管理\其它\简历（阮鸥）.doc" />
+    <None Include="V1.0\管理\其它\马忠宝简历.doc" />
+    <None Include="V1.0\管理\评审记录\RMV1.0_测试方案评审报告.xls" />
+    <None Include="V1.0\管理\评审记录\RMV1.0_测试用例评审报告.xls" />
+    <None Include="V1.0\管理\评审记录\RMV1.0_用户故事评审报告.xls" />
+    <None Include="V1.0\管理\评审记录\RMV1.0_评审报告.xls" />
+    <None Include="V1.0\管理\质量管理\2012年QA工作报告-6月份.xls" />
+    <None Include="V1.0\管理\质量管理\RMV1.0_QA检查记录表.xls" />
+    <None Include="V1.0\管理\配置管理\RMV1.0_基线跟踪表.xls" />
+    <None Include="V1.0\管理\配置管理\RMV1.0_项目配置权限表.xls" />
+    <None Include="V1.0\管理\项目变更\RMV1.0_变更控制表.xls" />
+    <None Include="V1.0\管理\项目报告\CO2.0_项目周报_迭代.xls" />
+    <None Include="V1.0\管理\项目报告\COV2.0_项目月报.xls" />
+    <None Include="V1.0\管理\项目报告\EMV1.0_迭代总结报告.xls" />
+    <None Include="V1.0\管理\项目报告\EMV1.0_项目阶段报告.xls" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\RMV1.0_项目进度跟踪表%282012-05-07~2012-05-13%29.xlsx" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\RMV1.0_项目进度跟踪表%282012-05-07~2012-05-13%29_09.xlsx" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\RMV1.0_项目进度跟踪表%282012-05-07~2012-05-13%29_10.xlsx" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\RMV1.0_项目进度跟踪表%282012-05-07~2012-05-13%29_12.xlsx" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\RMV1.0_项目进度跟踪表%282012-05-14~2012-05-18%29_15.xlsx" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\RMV1.0_项目进度跟踪表%282012-05-14~2012-05-18%29_16.xlsx" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\RMV1.0_项目进度跟踪表%282012-05-14~2012-05-18%29_17.xlsx" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\RMV1.0_项目进度跟踪表%282012-05-14~2012-05-18%29_18.xlsx" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\外包团队提出的问题列表.xlsx" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\技术调查_广州.xlsx" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\疑问0516.doc" />
+    <None Include="V1.0\管理\项目报告\外包的工作情况\问题_2012_05_10.docx" />
+    <None Include="V1.0\管理\项目策划\RMV1.0_项目策划书.xls" />
+    <None Include="V1.0\管理\项目策划\RMV1.0_项目综合表%282012-05-21%29.mpp" />
+    <None Include="V1.0\管理\项目策划\RMV1.0_项目综合表.mpp" />
+    <None Include="V1.0\管理\项目策划\RMV1.0项目综合表（2012-8-10）.mpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="V1.0\工程\分析\RecuritDB.sql" />
+    <Content Include="V1.0\工程\分析\招聘系统.pdb" />
+    <Content Include="V1.0\管理\其它\公司资料\代码证.jpg" />
+    <Content Include="V1.0\管理\其它\公司资料\国税.jpg" />
+    <Content Include="V1.0\管理\其它\公司资料\地税.jpg" />
+    <Content Include="V1.0\管理\其它\外包团队人员名单\开发人员.txt" />
+    <Content Include="V1.0\管理\其它\外包团队人员名单\新建 文本文档.txt" />
+    <Content Include="V1.0\管理\其它\外包团队帐号.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="V1.0\工程\其它\需求讨论录音档\" />
+    <Folder Include="V1.0\工程\发布\" />
+    <Folder Include="V1.0\工程\实现\原码\" />
+    <Folder Include="V1.0\工程\验收\SMT开发框架使用手册\" />
+    <Folder Include="V1.0\管理\其它\中天冠捷项目评估分项报价表（招聘模块）201204121134\" />
+    <Folder Include="V1.0\管理\其它\外包交付文档\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
+        <ProjectProperties HostName="ProjectManageTemp.docx" HostPackage="{18A3A5AC-5778-4778-901C-ADAAC08E910A}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="DOC" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="D:\Program Files\Microsoft Office\Office15\WINWORD.EXE" DebugInfoCommandLine="/w &quot;[$OUTPUT]ProjectManageTemp.docx&quot;" />
+        <Host Name="Word Document" Path=".\ProjectManageTemp.docx" GeneratedCodeNamespace="ProjectManageTemp">
+          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" />
+        </Host>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!--
+    To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
